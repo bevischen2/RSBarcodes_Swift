@@ -201,7 +201,7 @@ open class RSAbstractCodeGenerator : RSCodeGenerator {
 
                 if let outputImage = outputImage?.transformed(by: transform) {
                     if let cgImage = ContextMaker.make().createCGImage(outputImage, from: outputImage.extent) {
-                        return UIImage(cgImage: cgImage, scale: UIScreen.main.scale, orientation: .up)
+                        return UIImage(cgImage: cgImage, scale: 1, orientation: .up)
                     }
                 }
             }
